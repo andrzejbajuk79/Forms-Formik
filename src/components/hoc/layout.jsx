@@ -1,12 +1,16 @@
 import React from 'react';
-import Header from './../header/header';
+import Header from '../StaticPages/header';
+import Footer from '../StaticPages/Footer';
 
-const Layout = props => {
+
+ const Layout = ({ children }) => {
  return (
-  <div>
-   <Header />
-   <div>{props.children}</div>
-  </div>
+   <>
+     <Header />
+     {children} 
+     <Footer />
+   </>
  );
 };
-export default Layout;
+
+export default Layout 
